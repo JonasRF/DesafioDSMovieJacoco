@@ -1,5 +1,6 @@
 package com.devsuperior.dsmovie.tests;
 
+import com.devsuperior.dsmovie.entities.RoleEntity;
 import com.devsuperior.dsmovie.entities.UserEntity;
 
 public class UserFactory {

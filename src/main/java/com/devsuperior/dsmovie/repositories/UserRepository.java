@@ -21,4 +21,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
 			WHERE tb_user.username = :username
 		""")
 	List<UserDetailsProjection> searchUserAndRolesByUsername(String username);
+
+	UserEntity findByName(String username);
 }
