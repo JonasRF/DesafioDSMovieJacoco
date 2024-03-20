@@ -54,6 +54,12 @@ public class ScoreServiceTests {
 		movieEntity = MovieFactory.createMovieEntity();
 		scoreEntity = ScoreFactory.createScoreEntity();
 
+		ScoreEntity scoreEntity1 = new ScoreEntity();
+		scoreEntity1.setMovie(movieEntity);
+		scoreEntity1.setUser(client);
+		scoreEntity1.setValue(4.70);
+		movieEntity.getScores().add(scoreEntity1);
+
 		when(userService.authenticated()).thenReturn(client);
 		when(movieRepository.findById(existingId)).thenReturn(Optional.ofNullable(movieEntity));
 		when(scoreRepository.saveAndFlush(any())).thenReturn(scoreEntity);
