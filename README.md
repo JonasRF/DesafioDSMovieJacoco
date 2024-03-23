@@ -39,4 +39,3 @@ Competências avaliadas:
 
 - Cobertura de código com Jacoco
 
-Ver todos slides
